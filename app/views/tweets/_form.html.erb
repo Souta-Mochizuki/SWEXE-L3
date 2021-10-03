@@ -6,3 +6,11 @@
   <% end %>
 </ul>
 <% end %>
+
+<%= form_for tweet , url: {action: ac} do |f| %>
+  <%= f.label :message, 'メッセージ' %>
+  <%= f.text_field :message %>
+  <p>投稿時刻：<%= Time.current %></p>
+  <%= f.hidden_field :tdate, value: Time.current %>
+  <%= f.submit bo %>
+<% end %>
