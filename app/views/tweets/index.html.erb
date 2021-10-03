@@ -1,6 +1,51 @@
 <% if flash[:notice] %>
 　　<%= flash[:notice] %>
 <% end %>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="page">
+            <header>
+                
+            </header>
+        </div>
+
+        <div id="pagebody1">
+            <div class="container1">
+                <div class="item1"><div id="home">ホーム</div></div>
+                <div class="item1">＃話題を検索</div>
+                <div class="item1">通知</div>
+                <div class="item1">メッセージ</div>
+                <div class="item1">ブックマーク</div>
+                <div class="item1">リスト</div>
+                <div class="item1">プロフィール</div>
+                <div class="item1">もっと見る</div>
+                <div class="item1"><div id="tw"><p><%= link_to 'ツイートする',new_tweet_path %></p></div></div>
+            </div>
+        </div>
+
+        <div id="pagebody2">
+            <div class="container2">
+                <div class="item2">ツイート</div>
+                <div class="item2">ツイート返信</div>
+                <div class="item2">メディア</div>
+                <div class="item2">いいね</div>
+            </div>
+        </div>
+
+        <div id="pagebody3">
+            <div class="container3">
+                <div class="item3">Item</div>
+                <div class="item3">Item</div>
+                <div class="item3">Item</div>
+                <div class="item3">Item</div>
+            </div>
+        </div>
+    </body>
+</html>
 
 <% @tweets.each do |tweet| %>
   <p>
@@ -12,4 +57,3 @@
   <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
   </p>
 <% end %>
-<p><%= link_to '新規追加','tweets/new' %></p>
