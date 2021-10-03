@@ -38,22 +38,19 @@
 
         <div id="pagebody3">
             <div class="container3">
-                <div class="item3">Item</div>
-                <div class="item3">Item</div>
-                <div class="item3">Item</div>
-                <div class="item3">Item</div>
+                <div class="item3">
+                    <% @tweets.each do |tweet| %>
+                    <p>
+                        <%= tweet.message %><br>
+                        <%= ((Time.current-tweet.tdate)/60).round %>分前の投稿<br>
+                        <%= link_to '削除', method: :delete %>
+                        <%= link_to '表示', tweet %>
+                        <%= link_to '編集', edit_tweet_path(:id) %>
+                    </p>
+                    <% end %>
+                </div>
             </div>
         </div>
     </body>
 </html>
 
-<% @tweets.each do |tweet| %>
-  <p>
-  <%= tweet.message %><br>
-  
-  <%= ((Time.current-tweet.tdate)/60).round %>分前の投稿<br>
-  <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
-  <%= link_to '表示', "/tweets/#{tweet.id}" %>
-  <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
-  </p>
-<% end %>
