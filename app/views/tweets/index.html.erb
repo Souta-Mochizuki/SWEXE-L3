@@ -5,6 +5,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <div id="page">
@@ -15,15 +16,16 @@
 
         <div id="pagebody1">
             <div class="container1">
-                <div class="item1"><div id="home">ホーム</div></div>
+                <div class="item1"><div id="home"> <i class="material-icons">home</i>ホーム</div></div>
                 <div class="item1">＃話題を検索</div>
-                <div class="item1">通知</div>
-                <div class="item1">メッセージ</div>
-                <div class="item1">ブックマーク</div>
-                <div class="item1">リスト</div>
-                <div class="item1">プロフィール</div>
+                <div class="item1"><i class="material-icons">notifications</i>通知</div>
+                <div class="item1"><i class="material-icons">email</i>メッセージ</div>
+                <div class="item1"><i class="material-icons">bookmark</i>ブックマーク</div>
+                <div class="item1"><i class="material-icons">list</i>リスト</div>
+                <div class="item1"><i class="material-icons">person</i>プロフィール</div>
                 <div class="item1">もっと見る</div>
                 <div class="item1"><div id="tw"><p><%= link_to 'ツイートする',new_tweet_path %></p></div></div>
+                <i class="material-icons">face</i>
             </div>
         </div>
 
